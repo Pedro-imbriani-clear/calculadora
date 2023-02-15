@@ -4,19 +4,14 @@ class CalcController{
         this._displayCalcEl =  document.querySelector("#display"); 
         this._dateEl = document.querySelector("#data");
         this._timeEl =  document.querySelector("#hora");
-
-        this._displayCalc = "0";
         this._currentDate;
         this.initiazile();
     }
     initiazile(){
 
-     let displayCalcEl =  document.querySelector("#display"); 
-     let dateEl = document.querySelector("#data");
-     let timeEl =  document.querySelector("#hora");
-        displayCalcEl.innerHTML = "756"
-        dateEl.innerHTML = "20/04/2022"
-        timeEl.innerHTML = "21:30"
+    
+        this._dateEl.innerHTML = "10/04/2022";
+        this._timeEl.innerHTML = "21:30";
 
     }
     get displayCalc(){
@@ -24,7 +19,7 @@ class CalcController{
         return this._displayCalcEl.innerHTML;
     }
     set displayCalc(valor){
-        this._displayCalc = valor;
+        this._displayCalcEl.innerHTML = valor;
     }
     get currentDate(){
         return this._currentDate;
